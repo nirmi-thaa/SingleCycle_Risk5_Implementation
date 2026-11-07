@@ -15,7 +15,7 @@ yaml_version: 1
 stage: fetch
 
 modules:
-  if_stage:           {source_files: [IF_Stage/rtl.sv]}
+  if_stage:           {source_files: [IF_Stage/IF_stage.sv]}
   decoder:            {source_files: [Decoder/rtl.sv]}
   imm_generator:      {source_files: [Immediate_Generator/rtl.sv]}
   register_file:      {source_files: [Register_File/rtl.sv]}
