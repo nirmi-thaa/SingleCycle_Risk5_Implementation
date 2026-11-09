@@ -1,27 +1,8 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 05.11.2026 19:18:22
-// Design Name: 
-// Module Name: IF_stage
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module if_stage(
-input logic clock,
+input logic clk,
 input logic reset,
 input logic stall,
 input logic and_out,
@@ -30,7 +11,7 @@ output logic [31:0] address,
 output logic [31:0] pc_new
 );
 assign pc_new=address+4;
-always_ff @(posedge clock or posedge reset)
+always_ff @(posedge clk or posedge reset)
 begin
     if(reset)
         address<=32'h8000_0000;
