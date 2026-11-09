@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module IF_stage(
+module if_stage(
 input logic clock,
 input logic reset,
 input logic stall,
@@ -33,7 +33,7 @@ assign pc_new=address+4;
 always_ff @(posedge clock or posedge reset)
 begin
     if(reset)
-        address<=32'h8000_000;
+        address<=32'h8000_0000;
     else if(!stall)
     begin
         if(and_out)
